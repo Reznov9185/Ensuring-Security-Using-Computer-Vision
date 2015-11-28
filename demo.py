@@ -1,6 +1,13 @@
 import numpy as np
-import cv2, os
+import cv2, os, datetime, MySQLdb
 from PIL import Image
+
+
+db = MySQLdb.connect(host="localhost",
+                     user="root",
+                      passwd="root",
+                      db="surveillance_db")
+cur = db.cursor()
 
 # Haar cascade classifier for classifying frontal face
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -44,7 +51,6 @@ def training():
     # Perform the training
     recognizer.train(images, np.array(labels))
 
-
 # recognizer
 
 
@@ -54,14 +60,16 @@ def recognize(filename):
     faces = face_cascade.detectMultiScale(predict_image)
     for (x, y, w, h) in faces:
         nbr_predicted, conf = recognizer.predict(predict_image[y: y + h, x: x + w])
-        if conf < 500:
-            print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted,
-                                                                                                     conf, x, y, w, h)
+        if conf < 100:
+            print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
+            insert_data = "INSERT INTO access_entries( subject_id, access_time, confidence, origin_x, origin_y, height, width) VALUES (" + str(nbr_predicted) + ",'" + str(datetime.datetime.now().strftime("%A %d %B %Y %I-%M-%S%p")) + "'," + str(conf) + "," + str(x) + "," + str(y) + "," + str(h) + "," + str(w) + ");"
+            #print(insert_data)
+            cur.execute(insert_data)
         else:
-            print "face_detected1.png not identified  at x={}, y={}, w={}, h={} ."
-            print(conf)
-        # cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
-        cv2.waitKey(1000)
+            print "{} not identified with confidence  at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
+        cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
 
 camera_feed = cv2.VideoCapture(1)
@@ -70,14 +78,13 @@ frame_count = 0
 while (camera_feed.isOpened()):
     ret, frame = camera_feed.read()
     frame_count += 1
-    if camera_feed is not None:
+    if frame_count % 60 == 0 and camera_feed is not None:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
         i = 1
         for (x, y, w, h) in faces:
             img = Image.fromarray(frame[y:y + h, x:x + w])
             face_detected = img.convert('L')
-            face_detected = cv2.GaussianBlur(np.array(face_detected),(5,5),0)
             filename = './detected_faces/face_detected' + str(i) + '.png'
             cv2.imwrite(filename, np.array(face_detected))
             cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
