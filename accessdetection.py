@@ -1,5 +1,5 @@
 import numpy as np
-import cv2, os
+import cv2, os, datetime
 from PIL import Image
 
 # Haar cascade classifier for classifying frontal face
@@ -10,7 +10,6 @@ if face_cascade.empty():
 # Start train for recognition
 # For face recognition we will use the LBPH Face Recognizer
 recognizer = cv2.createLBPHFaceRecognizer()
-
 
 def training():
     def get_images_labels(path):
@@ -36,7 +35,7 @@ def training():
         return images, labels
 
     # Path to the Yale Dataset
-    path = './yalefaces'
+    path = './training_faces'
     # Call the get_images_and_labels function and get the face images and the
     # corresponding labels
     images, labels = get_images_labels(path)
@@ -55,11 +54,15 @@ def recognize(filename):
     for (x, y, w, h) in faces:
         nbr_predicted, conf = recognizer.predict(predict_image[y: y + h, x: x + w])
         if conf < 55 :
-            print "{} is Correctly Recognized with confidence {}".format(nbr_predicted, conf)
+            print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
         else:
             print "face_detected1.png not identified"
-        cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
-        cv2.waitKey(1000)
+        #cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+                camera_feed.release()
+                cv2.destroyAllWindows()
+
+
 
 
 camera_feed = cv2.VideoCapture(0)
@@ -80,10 +83,10 @@ while(camera_feed.isOpened()):
             roi_gray = gray[y:y+h, x:x+w]
             roi_color = frame[y:y+h, x:x+w]
             i += 1
+            if cv2.waitKey(1) & 0xFF == ord('q'):
+                camera_feed.release()
+                cv2.destroyAllWindows()
         cv2.imshow('Camera Feed', frame)
-
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
 
 
 camera_feed.release()
