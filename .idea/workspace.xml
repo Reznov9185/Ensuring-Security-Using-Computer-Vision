@@ -2,179 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a620449-1a26-4e6c-97d5-239532bc8e0f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/motion_detector.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/motiondetection.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.glasses.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject01.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject02.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject03.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject04.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject05.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject06.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject07.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject08.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject09.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject10.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject11.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject12.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject13.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject14.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.centerlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.glasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.leftlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.noglasses" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.normal" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.rightlight" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.sad" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.sleepy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.surprised" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject15.wink" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject16.happy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/yalefaces/subject16.sleepy" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/demo.py" afterPath="$PROJECT_DIR$/accessdetection.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/training_faces/subject16.happy" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/training_faces/subject16.sleepy" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/accessdetection.py" afterPath="$PROJECT_DIR$/demo.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detected_faces/face_detected1.png" afterPath="$PROJECT_DIR$/detected_faces/face_detected1.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/detected_faces/face_detected2.png" afterPath="$PROJECT_DIR$/detected_faces/face_detected2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/motiondetection.py" afterPath="$PROJECT_DIR$/motiondetection.py" />
     </list>
     <ignored path="face_recognizer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -188,9 +22,9 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/face_recognizer$motiondetection.coverage" NAME="motiondetection Coverage Results" MODIFIED="1448700005589" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/face_recognizer$motiondetection.coverage" NAME="motiondetection Coverage Results" MODIFIED="1448705850627" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/face_recognizer$recog.coverage" NAME="recog Coverage Results" MODIFIED="1448554122839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/face_recognizer$demo.coverage" NAME="demo Coverage Results" MODIFIED="1448700014879" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/face_recognizer$demo.coverage" NAME="demo Coverage Results" MODIFIED="1448725681070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/face_recognizer$face_detection.coverage" NAME="face_detection Coverage Results" MODIFIED="1448554641539" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/face_recognizer$motion_detector.coverage" NAME="motion_detector Coverage Results" MODIFIED="1448697324487" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
@@ -215,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accessdetection.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/accessdetection.py">
+      <file leaf-file-name="demo.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5372751">
-              <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.3856041">
+              <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -231,32 +65,10 @@
         <entry file="file://$PROJECT_DIR$/motiondetection.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding>
                 <element signature="e#127#142#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="motion_detector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/motion_detector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-              <folding>
-                <element signature="e#127#142#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="motion_detector.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/basic-motion-detection/motion_detector.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -297,8 +109,9 @@
         <option value="$PROJECT_DIR$/recog.py" />
         <option value="$PROJECT_DIR$/face_detection.py" />
         <option value="$PROJECT_DIR$/motion_detector.py" />
-        <option value="$PROJECT_DIR$/demo.py" />
         <option value="$PROJECT_DIR$/motiondetection.py" />
+        <option value="$PROJECT_DIR$/accessdetection.py" />
+        <option value="$PROJECT_DIR$/demo.py" />
       </list>
     </option>
   </component>
@@ -372,20 +185,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="face_recognizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="face_recognizer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="basic-motion-detection" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -420,7 +219,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="face_recognizer" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/accessdetection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -722,28 +521,28 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="1317" height="744" extended-state="6" />
+    <frame x="49" y="24" width="1317" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2564516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36129034" sideWeight="0.49724627" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.49724627" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26907948" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27380016" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32419354" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2564516" sideWeight="0.50275373" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -764,7 +563,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -779,7 +578,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motiondetection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <folding>
+            <element signature="e#127#142#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recog.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="77" column="21" selection-start-line="67" selection-start-column="0" selection-end-line="77" selection-end-column="21" />
+          <folding>
+            <element signature="e#49#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_detection.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="15" selection-end-line="20" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/face_recognizer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="40" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="40" />
+          <folding>
+            <element signature="e#49#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
@@ -799,24 +648,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/motion_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding>
-            <element signature="e#127#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/basic-motion-detection/motion_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recog.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -847,7 +678,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -887,7 +718,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -927,7 +758,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
@@ -967,7 +798,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
@@ -1007,7 +838,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1057,38 +888,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/basic-motion-detection/motion_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="23" selection-start-line="92" selection-start-column="23" selection-end-line="92" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motion_detector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding>
-            <element signature="e#127#142#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/motiondetection.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="29" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#127#142#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/accessdetection.py">
+    <entry file="file://$PROJECT_DIR$/demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5372751">
-          <caret line="84" column="18" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.3856041">
+          <caret line="19" column="53" selection-start-line="19" selection-start-column="53" selection-end-line="19" selection-end-column="53" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

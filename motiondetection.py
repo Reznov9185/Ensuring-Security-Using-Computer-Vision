@@ -8,7 +8,7 @@ import imutils
 import cv2
 
 def motion_detect():
-    motion_camera_feed = cv2.VideoCapture(1)
+    motion_camera_feed = cv2.VideoCapture(0)
 
     # initialize the first frame in the video stream
     firstFrame = None

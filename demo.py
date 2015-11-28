@@ -1,5 +1,5 @@
 import numpy as np
-import cv2, os, datetime
+import cv2, os
 from PIL import Image
 
 # Haar cascade classifier for classifying frontal face
@@ -13,7 +13,7 @@ recognizer = cv2.createLBPHFaceRecognizer()
 
 def training():
     def get_images_labels(path):
-        image_paths = [os.path.join(path, f) for f in os.listdir(path) if not f.endswith('.sad')]
+        image_paths = [os.path.join(path, f) for f in os.listdir(path)]
         images = []
         labels = []
         for image_path in image_paths:
@@ -44,7 +44,8 @@ def training():
     # Perform the training
     recognizer.train(images, np.array(labels))
 
-#recognizer
+
+# recognizer
 
 
 def recognize(filename):
@@ -53,41 +54,41 @@ def recognize(filename):
     faces = face_cascade.detectMultiScale(predict_image)
     for (x, y, w, h) in faces:
         nbr_predicted, conf = recognizer.predict(predict_image[y: y + h, x: x + w])
-        if conf < 55 :
-            print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
+        if conf < 500:
+            print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted,
+                                                                                                     conf, x, y, w, h)
         else:
-            print "face_detected1.png not identified"
-        #cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
-        if cv2.waitKey(1) & 0xFF == ord('q'):
-                camera_feed.release()
-                cv2.destroyAllWindows()
+            print "face_detected1.png not identified  at x={}, y={}, w={}, h={} ."
+            print(conf)
+        # cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
+        cv2.waitKey(1000)
 
 
-
-
-camera_feed = cv2.VideoCapture(0)
+camera_feed = cv2.VideoCapture(1)
 training()
-while(camera_feed.isOpened()):
+frame_count = 0
+while (camera_feed.isOpened()):
     ret, frame = camera_feed.read()
+    frame_count += 1
     if camera_feed is not None:
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
         faces = face_cascade.detectMultiScale(gray, 1.3, 5)
         i = 1
-        for (x,y,w,h) in faces:
-            img = Image.fromarray(frame[y:y+h, x:x+w])
+        for (x, y, w, h) in faces:
+            img = Image.fromarray(frame[y:y + h, x:x + w])
             face_detected = img.convert('L')
-            filename = './detected_faces/face_detected'+str(i)+'.png'
+            face_detected = cv2.GaussianBlur(np.array(face_detected),(5,5),0)
+            filename = './detected_faces/face_detected' + str(i) + '.png'
             cv2.imwrite(filename, np.array(face_detected))
-            cv2.rectangle(frame,(x,y),(x+w,y+h),(255,0,0),2)
+            cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
             recognize(filename)
-            roi_gray = gray[y:y+h, x:x+w]
-            roi_color = frame[y:y+h, x:x+w]
+            roi_gray = gray[y:y + h, x:x + w]
+            roi_color = frame[y:y + h, x:x + w]
             i += 1
-            if cv2.waitKey(1) & 0xFF == ord('q'):
-                camera_feed.release()
-                cv2.destroyAllWindows()
-        cv2.imshow('Camera Feed', frame)
+    cv2.imshow('Camera Feed', frame)
 
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
 
 camera_feed.release()
 cv2.destroyAllWindows()
