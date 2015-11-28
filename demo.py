@@ -2,7 +2,6 @@ import numpy as np
 import cv2, os, datetime, MySQLdb
 from PIL import Image
 
-
 db = MySQLdb.connect(host="localhost",
                      user="root",
                       passwd="root",
@@ -72,30 +71,33 @@ def recognize(filename):
             break
 
 
-camera_feed = cv2.VideoCapture(1)
-training()
-frame_count = 0
-while (camera_feed.isOpened()):
-    ret, frame = camera_feed.read()
-    frame_count += 1
-    if frame_count % 60 == 0 and camera_feed is not None:
-        gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = face_cascade.detectMultiScale(gray, 1.3, 5)
-        i = 1
-        for (x, y, w, h) in faces:
-            img = Image.fromarray(frame[y:y + h, x:x + w])
-            face_detected = img.convert('L')
-            filename = './detected_faces/face_detected' + str(i) + '.png'
-            cv2.imwrite(filename, np.array(face_detected))
-            cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            recognize(filename)
-            roi_gray = gray[y:y + h, x:x + w]
-            roi_color = frame[y:y + h, x:x + w]
-            i += 1
-    cv2.imshow('Camera Feed', frame)
+def main_func():
+    camera_feed = cv2.VideoCapture(1)
+    training()
+    frame_count = 0
+    while (camera_feed.isOpened()):
+        ret, frame = camera_feed.read()
+        frame_count += 1
+        if frame_count % 60 == 0 and camera_feed is not None:
+            gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+            faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+            i = 1
+            for (x, y, w, h) in faces:
+                img = Image.fromarray(frame[y:y + h, x:x + w])
+                face_detected = img.convert('L')
+                filename = './detected_faces/face_detected' + str(i) + '.png'
+                cv2.imwrite(filename, np.array(face_detected))
+                cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+                recognize(filename)
+                roi_gray = gray[y:y + h, x:x + w]
+                roi_color = frame[y:y + h, x:x + w]
+                i += 1
+        cv2.imshow('Camera Feed', frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
-        break
+        if cv2.waitKey(1) & 0xFF == ord('q'):
+            break
 
-camera_feed.release()
-cv2.destroyAllWindows()
+    camera_feed.release()
+    cv2.destroyAllWindows()
+
+main_func()

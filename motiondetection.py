@@ -3,21 +3,32 @@
 # python motion_detector.py --video videos/example_01.mp4
 
 # import the necessary packages
-import datetime
+import datetime, MySQLdb
 import imutils
 import cv2
 
+#mysql connection
+db = MySQLdb.connect(host="localhost",
+                     user="root",
+                      passwd="root",
+                      db="surveillance_db")
+cur = db.cursor()
+
+room_id = 1
+
 def motion_detect():
-    motion_camera_feed = cv2.VideoCapture(0)
+    motion_camera_feed = cv2.VideoCapture(1)
 
     # initialize the first frame in the video stream
     firstFrame = None
+    frame_count = 0
 
     # loop over the frames of the video
     while(motion_camera_feed.isOpened()):
         ret, frame = motion_camera_feed.read()
+        frame_count += 1
         text = "Unoccupied"
-        if motion_camera_feed is not None:
+        if motion_camera_feed is not None and frame_count % 10 ==0:
             # resize the frame, convert it to grayscale, and blur it
             frame = imutils.resize(frame, width=500)
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -31,11 +42,11 @@ def motion_detect():
             # compute the absolute difference between the current frame and
             # first frame
             frameDelta = cv2.absdiff(firstFrame, gray)
-            thresh = cv2.threshold(frameDelta, 125, 255, cv2.THRESH_BINARY)[1]
+            thresh = cv2.threshold(frameDelta, 75, 255, cv2.THRESH_BINARY)[1]
 
             # dilate the thresholded image to fill in holes, then find contours
             # on thresholded image
-            thresh = cv2.dilate(thresh, None, iterations=1)
+            thresh = cv2.dilate(thresh, None, iterations=2)
             (cnts, _) = cv2.findContours(thresh.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
             # loop over the contours
@@ -49,6 +60,9 @@ def motion_detect():
                 (x, y, w, h) = cv2.boundingRect(c)
                 cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 text = "Occupied"
+                insert_data = "INSERT INTO motion_entries(room_id,occupied_time) VALUES (" + str(room_id) + ",'" + str(datetime.datetime.now().strftime("%A %d %B %Y %I-%M-%S%p")) + "');"
+                #print(insert_data)
+                cur.execute(insert_data)
 
             # draw the text and timestamp on the frame
             cv2.putText(frame, "Room Status: {}".format(text), (10, 20),
