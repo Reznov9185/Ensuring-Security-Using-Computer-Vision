@@ -6,7 +6,8 @@ db = MySQLdb.connect(host="localhost",
                      user="root",
                       passwd="root",
                       db="surveillance_db")
-cur = db.cursor()
+cur1 = db.cursor()
+cur2 = db.cursor()
 
 # Haar cascade classifier for classifying frontal face
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
@@ -60,19 +61,25 @@ def recognize(filename):
     for (x, y, w, h) in faces:
         nbr_predicted, conf = recognizer.predict(predict_image[y: y + h, x: x + w])
         if conf < 100:
-            print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
             insert_data = "INSERT INTO access_entries( subject_id, access_time, confidence, origin_x, origin_y, height, width) VALUES (" + str(nbr_predicted) + ",'" + str(datetime.datetime.now().strftime("%A %d %B %Y %I-%M-%S%p")) + "'," + str(conf) + "," + str(x) + "," + str(y) + "," + str(h) + "," + str(w) + ");"
             #print(insert_data)
-            cur.execute(insert_data)
+            cur1.execute(insert_data)
+            find_subject ="SELECT subject_name FROM subjects WHERE subject_id = " + str(nbr_predicted) + ";"
+            print(find_subject)
+            cur2.execute(find_subject)
+            cur2.fetchone()
+            for (subject_name) in cur2:
+                name = subject_name[0]
+                print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(name, conf, x, y, w, h)
+            #print(cur2)
         else:
             print "{} not identified with confidence  at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
         cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
-
 def main_func():
-    camera_feed = cv2.VideoCapture(1)
+    camera_feed = cv2.VideoCapture(0)
     training()
     frame_count = 0
     while (camera_feed.isOpened()):
