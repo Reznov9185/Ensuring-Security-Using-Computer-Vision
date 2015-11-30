@@ -5,12 +5,14 @@ from PIL import Image
 #mysql connection
 db = MySQLdb.connect(host="localhost",
                      user="root",
-                      passwd="root",
-                      db="surveillance_db")
+                     passwd="root",
+                     db="surveillance_db")
 cur = db.cursor()
 
 room_id = 1
-alerm = 0
+global alarm
+alarm = 0
+
 # Haar cascade classifier for classifying frontal face
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 if face_cascade.empty():
@@ -73,21 +75,17 @@ def recognize(filename):
                 name = subject_name[0]
                 print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(name, conf, x, y, w, h)
             #print(cur2)
-            find_authentication = "SELECT authenticated_subject_id FROM authentication_table WHERE room_id = " + str(room_id) + ";"
+            find_authentication = "SELECT subject_id FROM authentication_table WHERE room_id = " + str(room_id) + ";"
             print(find_authentication)
             cur.execute(find_authentication)
-            cur.fetchone()
-            global alerm
-            alerm = 1
+            cur.fetchall()
+            global alarm
             for valid_subject in cur:
-                if valid_subject == nbr_predicted:
-                    alerm = 0
+                if str(valid_subject[0]) == str(nbr_predicted):
+                    alarm = 0
                     break
-                else:
-                    alerm = 1
         else:
-            global alerm
-            alerm = 1
+            alarm = 1
             print "{} not identified with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
         cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
         key = cv2.waitKey(1) & 0xFF
@@ -102,8 +100,8 @@ def motion_detect():
     firstFrame = None
     frame_count = 0
 
-    global alerm
-    alerm = 0
+    global alarm
+    alarm = 0
 
     # loop over the frames of the video
     while(motion_camera_feed.isOpened()):
@@ -156,8 +154,8 @@ def motion_detect():
                 b, g, r = 0, 0, 255
             cv2.putText(frame, "Room Status: {}".format(text), (10, 20),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (b, g, r), 2)
-            if alerm == 1:
-                cv2.putText(frame, "Unauthorized Access (ALERM) ".format(text), (10, frame.shape[0] - 25),
+            if alarm == 1:
+                cv2.putText(frame, "Unauthorized Access (ALARM) ".format(text), (10, frame.shape[0] - 25),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1)
             else:
                 cv2.putText(frame, "Authorized Access".format(text), (10, frame.shape[0] - 25),
