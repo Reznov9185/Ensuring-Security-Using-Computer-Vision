@@ -1,5 +1,5 @@
 import numpy as np
-import cv2, os, imutils, datetime, MySQLdb
+import cv2, os, imutils, datetime, MySQLdb, multiprocessing
 from PIL import Image
 
 #mysql connection
@@ -93,8 +93,9 @@ def recognize(filename):
         if key == ord("q"):
             break
 
-def motion_detect():
-    motion_camera_feed = cv2.VideoCapture(0)
+
+def motion_detect(camera_id):
+    motion_camera_feed = cv2.VideoCapture(camera_id)
 
     # initialize the first frame in the video stream
     firstFrame = None
@@ -163,7 +164,7 @@ def motion_detect():
             cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
                 (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 255, 0), 1)
 
-            cv2.imshow("Security Feed", frame)
+            cv2.imshow("Security Feed"+str(camera_id), frame)
             #cv2.imshow("Thresh", thresh)
             #cv2.imshow("Frame Delta", frameDelta)
 
@@ -193,6 +194,12 @@ def motion_detect():
 
 
 def main_func():
+    camera1 = 0
+    camera2 = 1
     training()
-    motion_detect()
+    # threading._start_new_thread(motion_detect(camera1))
+    # threading._start_new_thread(motion_detect(camera2))
+    cam_queue = multiprocessing.Queue()
+
+
 main_func()
