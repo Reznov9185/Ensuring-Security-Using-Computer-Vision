@@ -1,6 +1,7 @@
 import numpy as np
-import cv2, os, imutils, datetime, MySQLdb, multiprocessing
+import cv2, os, imutils, datetime, MySQLdb
 from PIL import Image
+import threading
 
 #mysql connection
 db = MySQLdb.connect(host="localhost",
@@ -197,9 +198,13 @@ def main_func():
     camera1 = 0
     camera2 = 1
     training()
-    # threading._start_new_thread(motion_detect(camera1))
-    # threading._start_new_thread(motion_detect(camera2))
-    cam_queue = multiprocessing.Queue()
 
-
+    motion_detect(camera1)
+    # thread.allocate(motion_detect(camera1))
+    # thread.allocate(motion_detect(camera2))
+    # cam_queue = multiprocessing.Queue()
+    t1=threading.Thread(target=motion_detect, args=[camera1])
+    t2=threading.Thread(target=motion_detect, args=[camera2])
+    t1.start()
+    t2.start()
 main_func()
