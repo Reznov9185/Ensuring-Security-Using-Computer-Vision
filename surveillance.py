@@ -1,9 +1,11 @@
 import numpy as np
 import cv2, os, imutils, datetime, MySQLdb
 from PIL import Image
-import threading
+from multiprocessing import Pool
 
 #mysql connection
+
+
 db = MySQLdb.connect(host="localhost",
                      user="root",
                      passwd="root",
@@ -145,6 +147,7 @@ def motion_detect(camera_id):
                 (x, y, w, h) = cv2.boundingRect(c)
                 #cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 text = "Occupied"
+                alarm = 1
                 insert_data = "INSERT INTO motion_entries(room_id,occupied_time) VALUES (" + str(room_id) + ",'" + str(datetime.datetime.now().strftime("%A %d %B %Y %I-%M-%S%p")) + "');"
                 #print(insert_data)
                 cur.execute(insert_data)
@@ -154,14 +157,14 @@ def motion_detect(camera_id):
                 b, g, r = 0, 255, 0
             else:
                 b, g, r = 0, 0, 255
+                if alarm == 1:
+                    cv2.putText(frame, "Unauthorized Access (ALARM) ".format(text), (10, frame.shape[0] - 25),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1)
+                else:
+                    cv2.putText(frame, "Authorized Access".format(text), (10, frame.shape[0] - 25),
+                        cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 1)
             cv2.putText(frame, "Room Status: {}".format(text), (10, 20),
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (b, g, r), 2)
-            if alarm == 1:
-                cv2.putText(frame, "Unauthorized Access (ALARM) ".format(text), (10, frame.shape[0] - 25),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1)
-            else:
-                cv2.putText(frame, "Authorized Access".format(text), (10, frame.shape[0] - 25),
-                    cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 1)
             cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
                 (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 255, 0), 1)
 
@@ -199,12 +202,20 @@ def main_func():
     camera2 = 1
     training()
 
+
     motion_detect(camera1)
+    motion_detect(camera2)
     # thread.allocate(motion_detect(camera1))
     # thread.allocate(motion_detect(camera2))
     # cam_queue = multiprocessing.Queue()
-    t1=threading.Thread(target=motion_detect, args=[camera1])
-    t2=threading.Thread(target=motion_detect, args=[camera2])
-    t1.start()
-    t2.start()
+    # t1 = threading.Thread(target=motion_detect, args=[camera1])
+    # t2 = threading.Thread(target=motion_detect, args=[camera2])
+
+    # pool = Pool(processes=2)
+    # results = [pool.apply_async(motion_detect, args=(cam,)) for cam in (0, 1)]
+    # for r in results:
+    #     r.get()
+
+    db.close()
+
 main_func()
