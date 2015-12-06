@@ -61,7 +61,7 @@ def training():
 
 
 def recognize(filename):
-    predict_image_pil = Image.open(filename).convert('L')
+    predict_image_pil = Image.open(filename)
     predict_image = np.array(predict_image_pil, 'uint8')
     faces = face_cascade.detectMultiScale(predict_image)
     for (x, y, w, h) in faces:
@@ -147,7 +147,6 @@ def motion_detect(camera_id):
                 (x, y, w, h) = cv2.boundingRect(c)
                 #cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
                 text = "Occupied"
-                alarm = 1
                 insert_data = "INSERT INTO motion_entries(room_id,occupied_time) VALUES (" + str(room_id) + ",'" + str(datetime.datetime.now().strftime("%A %d %B %Y %I-%M-%S%p")) + "');"
                 #print(insert_data)
                 cur.execute(insert_data)
@@ -168,7 +167,7 @@ def motion_detect(camera_id):
             cv2.putText(frame, datetime.datetime.now().strftime("%A %d %B %Y %I:%M:%S%p"),
                 (10, frame.shape[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.35, (0, 255, 0), 1)
 
-            cv2.imshow("Security Feed"+str(camera_id), frame)
+            cv2.imshow("Security Feed: "+str(camera_id), frame)
             #cv2.imshow("Thresh", thresh)
             #cv2.imshow("Frame Delta", frameDelta)
 
@@ -180,10 +179,10 @@ def motion_detect(camera_id):
                 face_detected = img.convert('L')
                 filename = './detected_faces/face_detected' + str(i) + '.png'
                 cv2.imwrite(filename, np.array(face_detected))
-                cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
+                # cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
                 recognize(filename)
-                #roi_gray = gray[y:y + h, x:x + w]
-                #roi_color = frame[y:y + h, x:x + w]
+                # roi_gray = gray[y:y+h, x:x+w]
+                # roi_color = frame[y:y+h, x:x+w]
                 i += 1
 
             key = cv2.waitKey(1) & 0xFF
@@ -204,7 +203,7 @@ def main_func():
 
 
     motion_detect(camera1)
-    motion_detect(camera2)
+    #motion_detect(camera2)
     # thread.allocate(motion_detect(camera1))
     # thread.allocate(motion_detect(camera2))
     # cam_queue = multiprocessing.Queue()
