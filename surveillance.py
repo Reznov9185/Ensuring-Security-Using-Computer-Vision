@@ -1,7 +1,6 @@
 import numpy as np
 import cv2, os, imutils, datetime, MySQLdb
 from PIL import Image
-from multiprocessing import Pool
 
 #mysql connection
 
@@ -45,7 +44,7 @@ def training():
                 images.append(image[y: y + h, x: x + w])
                 labels.append(nbr)
                 cv2.imshow("Adding faces to traning set...", image[y: y + h, x: x + w])
-                cv2.waitKey(50)
+                cv2.waitKey(5)
         # return the images list and labels list
         return images, labels
 
@@ -66,12 +65,12 @@ def recognize(filename):
     faces = face_cascade.detectMultiScale(predict_image)
     for (x, y, w, h) in faces:
         nbr_predicted, conf = recognizer.predict(predict_image[y: y + h, x: x + w])
-        if conf < 100:
+        if conf < 60:
             insert_data = "INSERT INTO access_entries( subject_id, access_time, confidence, origin_x, origin_y, height, width) VALUES (" + str(nbr_predicted) + ",'" + str(datetime.datetime.now().strftime("%A %d %B %Y %I-%M-%S%p")) + "'," + str(conf) + "," + str(x) + "," + str(y) + "," + str(h) + "," + str(w) + ");"
             #print(insert_data)
             cur.execute(insert_data)
             find_subject = "SELECT subject_name FROM subjects WHERE subject_id = " + str(nbr_predicted) + ";"
-            print(find_subject)
+            #print(find_subject)
             cur.execute(find_subject)
             cur.fetchone()
             for (subject_name) in cur:
@@ -79,7 +78,7 @@ def recognize(filename):
                 print "{} is Correctly Recognized with confidence {} at x={}, y={}, w={}, h={} .".format(name, conf, x, y, w, h)
             #print(cur2)
             find_authentication = "SELECT subject_id FROM authentication_table WHERE room_id = " + str(room_id) + ";"
-            print(find_authentication)
+            #print(find_authentication)
             cur.execute(find_authentication)
             cur.fetchall()
             global alarm
@@ -89,7 +88,7 @@ def recognize(filename):
                     break
         else:
             alarm = 1
-            print "{} not identified with confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
+            print "Face not identified with {} where confidence {} at x={}, y={}, w={}, h={} .".format(nbr_predicted, conf, x, y, w, h)
         cv2.imshow("Recognizing Face", predict_image[y: y + h, x: x + w])
         key = cv2.waitKey(1) & 0xFF
         # if the `q` key is pressed, break from the loop
@@ -114,7 +113,8 @@ def motion_detect(camera_id):
         text = "Unoccupied"
         #cv2.imshow("Camera Feed", frame)
         if motion_camera_feed is not None and frame_count %10  ==0:
-
+            start_time = datetime.datetime.now()
+            #print("Start time :" + str(start_time.strftime("%A %d %B %Y %I-%M-%S%p %f")))
             # resize the frame, convert it to grayscale, and blur it
             frame = imutils.resize(frame, width=500)
             gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -185,12 +185,15 @@ def motion_detect(camera_id):
                 # roi_color = frame[y:y+h, x:x+w]
                 i += 1
 
+            end_time = datetime.datetime.now()
+            #print("End time : " + str(end_time.strftime("%A %d %B %Y %I-%M-%S%p %f")))
+            diff = end_time-start_time
+            print("Frame = " + str(frame_count) + " Difference = " + str(divmod(diff.total_seconds(), 60)))
             key = cv2.waitKey(1) & 0xFF
 
             # if the `q` key is pressed, break from the lop
             if key == ord("q"):
                 break
-
     # cleanup the camera and close any open windows
     motion_camera_feed.release()
     cv2.destroyAllWindows()
@@ -204,16 +207,6 @@ def main_func():
 
     motion_detect(camera1)
     #motion_detect(camera2)
-    # thread.allocate(motion_detect(camera1))
-    # thread.allocate(motion_detect(camera2))
-    # cam_queue = multiprocessing.Queue()
-    # t1 = threading.Thread(target=motion_detect, args=[camera1])
-    # t2 = threading.Thread(target=motion_detect, args=[camera2])
-
-    # pool = Pool(processes=2)
-    # results = [pool.apply_async(motion_detect, args=(cam,)) for cam in (0, 1)]
-    # for r in results:
-    #     r.get()
 
     db.close()
 
