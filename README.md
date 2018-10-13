@@ -1,5 +1,7 @@
-# motion_detection-face_recognition
-Ensuring Security with Computer Vision
+# Ensuring Security with Computer Vision
+
+Architecture
+![System Architecture](https://drive.google.com/file/d/0BxRmf_2nNqHOVWwtRk9DeUZwdTg/view?usp=sharing)
 
 In our implementation, we have used devices and computers which are general in terms
 of computation, performance and efficiency. The results would be more satisfactory if
